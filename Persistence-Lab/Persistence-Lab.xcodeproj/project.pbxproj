@@ -3,27 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		807E8C5423D2053E003D321E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807E8C5323D2053E003D321E /* AppDelegate.swift */; };
 		807E8C5623D2053E003D321E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807E8C5523D2053E003D321E /* SceneDelegate.swift */; };
-		807E8C5823D2053E003D321E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807E8C5723D2053E003D321E /* ViewController.swift */; };
+		807E8C5823D2053E003D321E /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807E8C5723D2053E003D321E /* DisplayViewController.swift */; };
 		807E8C5B23D2053E003D321E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807E8C5923D2053E003D321E /* Main.storyboard */; };
 		807E8C5D23D2053F003D321E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807E8C5C23D2053F003D321E /* Assets.xcassets */; };
 		807E8C6023D2053F003D321E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807E8C5E23D2053F003D321E /* LaunchScreen.storyboard */; };
+		80F3C26623D22AE2009A781A /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3C26523D22AE2009A781A /* ImageCollectionCell.swift */; };
+		80F3C26923D22B9B009A781A /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 80F3C26823D22B9B009A781A /* ImageKit */; };
+		80F3C26B23D22BFA009A781A /* ImageAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3C26A23D22BFA009A781A /* ImageAPIClient.swift */; };
+		80F3C26D23D22CD8009A781A /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3C26C23D22CD8009A781A /* ImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		807E8C5023D2053E003D321E /* Persistence-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Persistence-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		807E8C5323D2053E003D321E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		807E8C5523D2053E003D321E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		807E8C5723D2053E003D321E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		807E8C5723D2053E003D321E /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		807E8C5A23D2053E003D321E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		807E8C5C23D2053F003D321E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		807E8C5F23D2053F003D321E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		807E8C6123D2053F003D321E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80F3C26523D22AE2009A781A /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
+		80F3C26A23D22BFA009A781A /* ImageAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIClient.swift; sourceTree = "<group>"; };
+		80F3C26C23D22CD8009A781A /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80F3C26923D22B9B009A781A /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +66,11 @@
 			children = (
 				807E8C5323D2053E003D321E /* AppDelegate.swift */,
 				807E8C5523D2053E003D321E /* SceneDelegate.swift */,
-				807E8C5723D2053E003D321E /* ViewController.swift */,
+				807E8C5723D2053E003D321E /* DisplayViewController.swift */,
 				807E8C5923D2053E003D321E /* Main.storyboard */,
+				80F3C26523D22AE2009A781A /* ImageCollectionCell.swift */,
+				80F3C26A23D22BFA009A781A /* ImageAPIClient.swift */,
+				80F3C26C23D22CD8009A781A /* ImageModel.swift */,
 				807E8C5C23D2053F003D321E /* Assets.xcassets */,
 				807E8C5E23D2053F003D321E /* LaunchScreen.storyboard */,
 				807E8C6123D2053F003D321E /* Info.plist */,
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = "Persistence-Lab";
+			packageProductDependencies = (
+				80F3C26823D22B9B009A781A /* ImageKit */,
+			);
 			productName = "Persistence-Lab";
 			productReference = 807E8C5023D2053E003D321E /* Persistence-Lab.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 807E8C4723D2053E003D321E;
+			packageReferences = (
+				80F3C26723D22B9B009A781A /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = 807E8C5123D2053E003D321E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				807E8C5823D2053E003D321E /* ViewController.swift in Sources */,
+				807E8C5823D2053E003D321E /* DisplayViewController.swift in Sources */,
+				80F3C26D23D22CD8009A781A /* ImageModel.swift in Sources */,
 				807E8C5423D2053E003D321E /* AppDelegate.swift in Sources */,
 				807E8C5623D2053E003D321E /* SceneDelegate.swift in Sources */,
+				80F3C26B23D22BFA009A781A /* ImageAPIClient.swift in Sources */,
+				80F3C26623D22AE2009A781A /* ImageCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		80F3C26723D22B9B009A781A /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		80F3C26823D22B9B009A781A /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80F3C26723D22B9B009A781A /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 807E8C4823D2053E003D321E /* Project object */;
 }
