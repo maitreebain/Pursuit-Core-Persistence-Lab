@@ -13,6 +13,12 @@ struct ImageAPIClient {
     
     static func fetchImages(for search: String, completion: @escaping (Result<Image, AppError>) -> ()){
         
+        let endPointurl = ""
         
+        let url = URL(string: endPointurl)
+        
+        let request = url
+        
+        NetworkHelper.shared.performDataTask(with: <#T##URLRequest#>, completion: <#T##(Result<Data, AppError>) -> ()#>)
     }
 }
