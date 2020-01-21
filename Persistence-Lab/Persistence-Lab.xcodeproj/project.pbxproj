@@ -13,6 +13,7 @@
 		807E8C5B23D2053E003D321E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807E8C5923D2053E003D321E /* Main.storyboard */; };
 		807E8C5D23D2053F003D321E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807E8C5C23D2053F003D321E /* Assets.xcassets */; };
 		807E8C6023D2053F003D321E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807E8C5E23D2053F003D321E /* LaunchScreen.storyboard */; };
+		80D67DAE23D79C2D00FBAE57 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D67DAD23D79C2D00FBAE57 /* Secrets.swift */; };
 		80F3C26623D22AE2009A781A /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3C26523D22AE2009A781A /* ImageCollectionCell.swift */; };
 		80F3C26923D22B9B009A781A /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 80F3C26823D22B9B009A781A /* ImageKit */; };
 		80F3C26B23D22BFA009A781A /* ImageAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3C26A23D22BFA009A781A /* ImageAPIClient.swift */; };
@@ -28,6 +29,7 @@
 		807E8C5C23D2053F003D321E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		807E8C5F23D2053F003D321E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		807E8C6123D2053F003D321E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80D67DAD23D79C2D00FBAE57 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		80F3C26523D22AE2009A781A /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
 		80F3C26A23D22BFA009A781A /* ImageAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIClient.swift; sourceTree = "<group>"; };
 		80F3C26C23D22CD8009A781A /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		807E8C5223D2053E003D321E /* Persistence-Lab */ = {
 			isa = PBXGroup;
 			children = (
+				80D67DAF23D79C3800FBAE57 /* Secrets */,
 				807E8C5323D2053E003D321E /* AppDelegate.swift */,
 				807E8C5523D2053E003D321E /* SceneDelegate.swift */,
 				807E8C5723D2053E003D321E /* DisplayViewController.swift */,
@@ -76,6 +79,14 @@
 				807E8C6123D2053F003D321E /* Info.plist */,
 			);
 			path = "Persistence-Lab";
+			sourceTree = "<group>";
+		};
+		80D67DAF23D79C3800FBAE57 /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				80D67DAD23D79C2D00FBAE57 /* Secrets.swift */,
+			);
+			path = Secrets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 			files = (
 				807E8C5823D2053E003D321E /* DisplayViewController.swift in Sources */,
 				80F3C26D23D22CD8009A781A /* ImageModel.swift in Sources */,
+				80D67DAE23D79C2D00FBAE57 /* Secrets.swift in Sources */,
 				807E8C5423D2053E003D321E /* AppDelegate.swift in Sources */,
 				807E8C5623D2053E003D321E /* SceneDelegate.swift in Sources */,
 				80F3C26B23D22BFA009A781A /* ImageAPIClient.swift in Sources */,
