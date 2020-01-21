@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct ImageDataLoad: Decodable {
+struct ImageDataLoad: Codable {
     let hits: [Image]
 }
 
-struct Image: Decodable {
+struct Image: Codable {
     let largeImageURL: String
 }
