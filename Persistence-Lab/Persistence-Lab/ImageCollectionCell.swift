@@ -13,8 +13,17 @@ class ImageCollectionCell: UICollectionViewCell {
    
     @IBOutlet weak var imageView: UIImageView!
     
-    func configureCell() {
+    var image: Image?
+    
+    func configureCell(for image: String) {
         
+        ImageAPIClient.fetchImages(for: image) { (result) in
+            
+            switch result{
+            case .failure(let appError):
+                
+            }
+        }
     }
     
 }

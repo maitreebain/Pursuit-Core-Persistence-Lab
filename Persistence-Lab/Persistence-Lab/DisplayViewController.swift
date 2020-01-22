@@ -14,11 +14,17 @@ class DisplayViewController: UIViewController {
  
     @IBOutlet weak var imageCollection: UICollectionView!
     
-    var imageData = [ImageDataLoad]() {
+    var imageData = [Image]() {
         didSet {
             DispatchQueue.main.async {
                 self.imageCollection.reloadData()
             }
+        }
+    }
+    
+    var searchQuery = "" {
+        didSet {
+            loadData(for: searchQuery)
         }
     }
     
@@ -30,7 +36,19 @@ class DisplayViewController: UIViewController {
         imageSearchBar.delegate = self
     }
 
-    
+
+    private func loadData(for search: String) {
+        ImageAPIClient.fetchImages(for: search) { (result) in
+            
+            switch result {
+            case .failure(let appError):
+                print("error is: \(appError)")
+            case .success(let imageData):
+                self.imageData = imageData
+            }
+        }
+        
+    }
 
 }
 
@@ -47,14 +65,48 @@ extension DisplayViewController: UICollectionViewDataSource {
         return cell
     }
     
-    
+
 }
 
-extension DisplayViewController: UICollectionViewDelegate {
+extension DisplayViewController: UICollectionViewDelegateFlowLayout {
     
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    let interItemSpacing: CGFloat = 10
+    let maxWidth = UIScreen.main.bounds.size.width
+    let numberOfItems: CGFloat = 3
+    let totalSpacing: CGFloat = numberOfItems * interItemSpacing
+    let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfItems
+    
+    return CGSize(width: itemWidth, height: itemWidth)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) ->  UIEdgeInsets {
+    return UIEdgeInsets(top: 20, left: 10, bottom: 5, right: 10)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    return 5
+  }
+
+  
 }
 
 
 extension DisplayViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText.count == 0 {
+            loadData(for: searchText)
+            return
+        }
+        
+        searchQuery = searchText
+    }
     
 }
