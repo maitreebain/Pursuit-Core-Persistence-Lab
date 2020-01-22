@@ -23,7 +23,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MqD-MS-yci">
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iCn-6w-n2g">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iCn-6w-n2g">
                                     <size key="itemSize" width="204" height="170"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -51,6 +51,7 @@
                                         <size key="customSize" width="204" height="170"/>
                                         <connections>
                                             <outlet property="imageView" destination="lTP-8C-OgH" id="2Jl-xO-Wzr"/>
+                                            <segue destination="be2-hs-M53" kind="show" id="GHE-Lk-mvf"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -77,6 +78,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2173.913043478261" y="95.758928571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AjG-NR-Oyh">
+            <objects>
+                <viewController id="be2-hs-M53" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mei-fc-djO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="JBO-Vk-ISi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lcg-5U-C1O"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPL-wq-xKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3063" y="104"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7S8-73-hOG">

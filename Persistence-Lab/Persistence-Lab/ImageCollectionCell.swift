@@ -10,20 +10,26 @@ import UIKit
 import ImageKit
 
 class ImageCollectionCell: UICollectionViewCell {
-   
+    
     @IBOutlet weak var imageView: UIImageView!
     
-    var image: Image?
-    
-    func configureCell(for image: String) {
+    func configureCell(for image: Image) {
         
-        ImageAPIClient.fetchImages(for: image) { (result) in
+        imageView.getImage(with: image.largeImageURL) { [weak self] (result) in
             
             switch result{
             case .failure(let appError):
+                DispatchQueue.main.async {
+                    self?.imageView.image = UIImage(systemName: "xmark.circle")
+                }
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self?.imageView.image = image
+                }
                 
             }
         }
+        
     }
     
 }

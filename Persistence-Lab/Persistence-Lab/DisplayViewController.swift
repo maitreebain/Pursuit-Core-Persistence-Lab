@@ -34,17 +34,18 @@ class DisplayViewController: UIViewController {
         imageCollection.delegate = self
         imageCollection.dataSource = self
         imageSearchBar.delegate = self
+        loadData(for: "snowman")
     }
 
 
     private func loadData(for search: String) {
-        ImageAPIClient.fetchImages(for: search) { (result) in
+        ImageAPIClient.fetchImages(for: search) { [weak self] (result) in
             
             switch result {
             case .failure(let appError):
                 print("error is: \(appError)")
             case .success(let imageData):
-                self.imageData = imageData
+                self?.imageData = imageData
             }
         }
         
@@ -61,6 +62,10 @@ extension DisplayViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "displayCell", for: indexPath) as? ImageCollectionCell else {
             fatalError("cell did not conform")
         }
+        
+        let image = imageData[indexPath.row]
+        
+        cell.configureCell(for: image)
         
         return cell
     }
