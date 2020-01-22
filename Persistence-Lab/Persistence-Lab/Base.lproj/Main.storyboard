@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="2173.913043478261" y="95.758928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="AjG-NR-Oyh">
             <objects>
-                <viewController id="be2-hs-M53" sceneMemberID="viewController">
+                <viewController id="be2-hs-M53" customClass="DetailViewController" customModule="Persistence_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mei-fc-djO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,12 +103,19 @@
                     <navigationItem key="navigationItem" id="Lcg-5U-C1O">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="R65-a5-d4d">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="co1-zJ-2b3">
-                                <rect key="frame" x="197" y="546.5" width="20.5" height="22"/>
+                                <rect key="frame" x="373.5" y="11" width="20.5" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="heart" catalog="system"/>
                             </button>
+                            <connections>
+                                <action selector="favoritedBy:" destination="be2-hs-M53" id="WzB-0o-8bF"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detailImage" destination="wZu-O7-0y6" id="KZz-gp-644"/>
+                        <outlet property="favoriteButton" destination="R65-a5-d4d" id="e0r-KK-Gc0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPL-wq-xKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,11 +157,11 @@
             </objects>
             <point key="canvasLocation" x="1950.7246376811595" y="809.59821428571422"/>
         </scene>
-        <!--Item-->
+        <!--Favorites-->
         <scene sceneID="eSt-Lu-Pxg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Ls-ln-Fbj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="L1S-ny-1Yb"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heart.fill" catalog="system" id="L1S-ny-1Yb"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="HUg-fL-M0g"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dGY-dH-cTE">
@@ -170,11 +177,11 @@
             </objects>
             <point key="canvasLocation" x="1040.5797101449275" y="809.59821428571422"/>
         </scene>
-        <!--Item-->
+        <!--Images-->
         <scene sceneID="wN5-Uo-1gy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vgm-z4-dq7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Dna-CQ-uFY"/>
+                    <tabBarItem key="tabBarItem" title="Images" image="camera.fill" catalog="system" id="Dna-CQ-uFY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GeG-hi-mkR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -191,6 +198,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera.fill" catalog="system" width="64" height="48"/>
         <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="heart.fill" catalog="system" width="64" height="54"/>
     </resources>
 </document>

@@ -50,6 +50,17 @@ class DisplayViewController: UIViewController {
         }
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController,
+            let indexPath = imageCollection.indexPathsForSelectedItems?.first else {
+                fatalError("could not segue")
+        }
+        let imageSelected = imageData[indexPath.row]
+        
+        detailVC.image = imageSelected
+        
+    }
 
 }
 

@@ -14,4 +14,9 @@ struct ImageDataLoad: Codable {
 
 struct Image: Codable {
     let largeImageURL: String
+    let likes: Int?
+    let favorites: Int?
+    let tags: String?
+    let previewURL: String?
+    let webformatURL: String?
 }

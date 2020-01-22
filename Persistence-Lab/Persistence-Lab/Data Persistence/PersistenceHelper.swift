@@ -18,33 +18,39 @@ enum DataPersistenceError: Error {
 
 class PersistenceHelper {
     
-    private var imageData = [Image]()
+    static private var imageData = [Image]()
     
-    private var filename: String
+    static private var filename = "images.plist"
     
-    init(filename: String) {
-        self.filename = filename
-    }
-    
-    func favorite() throws {
+    static func save() throws {
         
         let url = FileManager.pathToDocumentsDirectory(with: filename)
         
         do {
             let data = try PropertyListEncoder().encode(imageData)
             
-            try data.write(to: url)
+            try data.write(to: url, options: .atomic)
         }catch {
             throw DataPersistenceError.savingError(error)
         }
         
     }
     
-    func delete(image index: Int) throws{
+    static func createFavorite(for favoriteImage: Image) throws {
+        imageData.append(favoriteImage)
+        
+        do {
+            try save()
+        } catch {
+            throw DataPersistenceError.savingError(error)
+        }
+    }
+    
+    static func delete(image index: Int) throws{
         imageData.remove(at: index)
         
         do {
-            try favorite()
+            try save()
         } catch {
             throw DataPersistenceError.deletingError(error)
         }
