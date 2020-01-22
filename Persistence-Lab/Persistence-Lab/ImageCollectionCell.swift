@@ -19,6 +19,7 @@ class ImageCollectionCell: UICollectionViewCell {
             
             switch result{
             case .failure(let appError):
+                print("Error: \(appError)")
                 DispatchQueue.main.async {
                     self?.imageView.image = UIImage(systemName: "xmark.circle")
                 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8008475D23D8D94000D80CDF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008475C23D8D94000D80CDF /* DetailViewController.swift */; };
+		8008476123D8DA2000D80CDF /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008476023D8DA2000D80CDF /* FileManager+Extensions.swift */; };
+		8008476323D8DA6000D80CDF /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008476223D8DA6000D80CDF /* PersistenceHelper.swift */; };
 		807E8C5423D2053E003D321E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807E8C5323D2053E003D321E /* AppDelegate.swift */; };
 		807E8C5623D2053E003D321E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807E8C5523D2053E003D321E /* SceneDelegate.swift */; };
 		807E8C5823D2053E003D321E /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807E8C5723D2053E003D321E /* DisplayViewController.swift */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8008475C23D8D94000D80CDF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8008476023D8DA2000D80CDF /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
+		8008476223D8DA6000D80CDF /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		807E8C5023D2053E003D321E /* Persistence-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Persistence-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		807E8C5323D2053E003D321E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		807E8C5523D2053E003D321E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +53,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8008475E23D8D9E600D80CDF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				807E8C5723D2053E003D321E /* DisplayViewController.swift */,
+				8008475C23D8D94000D80CDF /* DetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8008475F23D8DA0700D80CDF /* Data Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				8008476023D8DA2000D80CDF /* FileManager+Extensions.swift */,
+				8008476223D8DA6000D80CDF /* PersistenceHelper.swift */,
+			);
+			path = "Data Persistence";
+			sourceTree = "<group>";
+		};
 		807E8C4723D2053E003D321E = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +90,11 @@
 		807E8C5223D2053E003D321E /* Persistence-Lab */ = {
 			isa = PBXGroup;
 			children = (
+				8008475F23D8DA0700D80CDF /* Data Persistence */,
 				80D67DAF23D79C3800FBAE57 /* Secrets */,
 				807E8C5323D2053E003D321E /* AppDelegate.swift */,
 				807E8C5523D2053E003D321E /* SceneDelegate.swift */,
-				807E8C5723D2053E003D321E /* DisplayViewController.swift */,
+				8008475E23D8D9E600D80CDF /* View Controllers */,
 				807E8C5923D2053E003D321E /* Main.storyboard */,
 				80F3C26523D22AE2009A781A /* ImageCollectionCell.swift */,
 				80F3C26A23D22BFA009A781A /* ImageAPIClient.swift */,
@@ -169,10 +194,13 @@
 				807E8C5823D2053E003D321E /* DisplayViewController.swift in Sources */,
 				80F3C26D23D22CD8009A781A /* ImageModel.swift in Sources */,
 				80D67DAE23D79C2D00FBAE57 /* Secrets.swift in Sources */,
+				8008476323D8DA6000D80CDF /* PersistenceHelper.swift in Sources */,
 				807E8C5423D2053E003D321E /* AppDelegate.swift in Sources */,
 				807E8C5623D2053E003D321E /* SceneDelegate.swift in Sources */,
 				80F3C26B23D22BFA009A781A /* ImageAPIClient.swift in Sources */,
 				80F3C26623D22AE2009A781A /* ImageCollectionCell.swift in Sources */,
+				8008475D23D8D94000D80CDF /* DetailViewController.swift in Sources */,
+				8008476123D8DA2000D80CDF /* FileManager+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
