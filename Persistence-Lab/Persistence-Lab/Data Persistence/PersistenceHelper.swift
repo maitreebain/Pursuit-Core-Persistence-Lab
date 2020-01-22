@@ -15,3 +15,40 @@ enum DataPersistenceError: Error {
   case decodingError(Error)
   case deletingError(Error)
 }
+
+class PersistenceHelper {
+    
+    private var imageData = [Image]()
+    
+    private var filename: String
+    
+    init(filename: String) {
+        self.filename = filename
+    }
+    
+    func favorite() throws {
+        
+        let url = FileManager.pathToDocumentsDirectory(with: filename)
+        
+        do {
+            let data = try PropertyListEncoder().encode(imageData)
+            
+            try data.write(to: url)
+        }catch {
+            throw DataPersistenceError.savingError(error)
+        }
+        
+    }
+    
+    func delete(image index: Int) throws{
+        imageData.remove(at: index)
+        
+        do {
+            try favorite()
+        } catch {
+            throw DataPersistenceError.deletingError(error)
+        }
+    }
+    
+    
+}
