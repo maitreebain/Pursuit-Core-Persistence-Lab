@@ -90,31 +90,63 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wZu-O7-0y6">
                                 <rect key="frame" x="20" y="128" width="374" height="358.5"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FF-If-Ldk">
+                                <rect key="frame" x="20" y="526.5" width="56" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorited by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFl-12-osd">
+                                <rect key="frame" x="271" y="526.5" width="123" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rw-D5-Of7">
+                                <rect key="frame" x="344" y="573.5" width="50" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWF-r8-91H">
+                                <rect key="frame" x="20" y="573.5" width="374" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="rFl-12-osd" firstAttribute="top" secondItem="wZu-O7-0y6" secondAttribute="bottom" constant="40" id="6OI-Ft-qPQ"/>
                             <constraint firstItem="JBO-Vk-ISi" firstAttribute="trailing" secondItem="wZu-O7-0y6" secondAttribute="trailing" constant="20" id="8nb-bo-a7F"/>
+                            <constraint firstItem="FWF-r8-91H" firstAttribute="top" secondItem="5FF-If-Ldk" secondAttribute="bottom" constant="20" id="DWj-wF-YkH"/>
                             <constraint firstItem="wZu-O7-0y6" firstAttribute="top" secondItem="JBO-Vk-ISi" secondAttribute="top" constant="40" id="Far-wk-VC1"/>
+                            <constraint firstItem="5FF-If-Ldk" firstAttribute="top" secondItem="wZu-O7-0y6" secondAttribute="bottom" constant="40" id="JgW-vG-UW9"/>
+                            <constraint firstItem="rFl-12-osd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5FF-If-Ldk" secondAttribute="trailing" constant="8" symbolic="YES" id="Mj6-rx-3a1"/>
+                            <constraint firstItem="JBO-Vk-ISi" firstAttribute="trailing" secondItem="rFl-12-osd" secondAttribute="trailing" constant="20" id="R3u-a1-pQD"/>
+                            <constraint firstItem="FWF-r8-91H" firstAttribute="leading" secondItem="JBO-Vk-ISi" secondAttribute="leading" constant="20" id="ZDW-5B-msf"/>
+                            <constraint firstItem="5FF-If-Ldk" firstAttribute="leading" secondItem="JBO-Vk-ISi" secondAttribute="leading" constant="20" id="aX7-rj-8P2"/>
+                            <constraint firstItem="1Rw-D5-Of7" firstAttribute="top" secondItem="rFl-12-osd" secondAttribute="bottom" constant="20" id="apj-9O-dW7"/>
                             <constraint firstItem="wZu-O7-0y6" firstAttribute="height" secondItem="Mei-fc-djO" secondAttribute="height" multiplier="0.4" id="eQq-Tq-WmQ"/>
+                            <constraint firstItem="JBO-Vk-ISi" firstAttribute="trailing" secondItem="1Rw-D5-Of7" secondAttribute="trailing" constant="20" id="hUd-AA-PHb"/>
                             <constraint firstItem="wZu-O7-0y6" firstAttribute="leading" secondItem="JBO-Vk-ISi" secondAttribute="leading" constant="20" id="wCB-fh-1my"/>
+                            <constraint firstItem="FWF-r8-91H" firstAttribute="centerX" secondItem="Mei-fc-djO" secondAttribute="centerX" id="zJW-El-OVG"/>
+                            <constraint firstItem="1Rw-D5-Of7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JBO-Vk-ISi" secondAttribute="leading" symbolic="YES" id="ziV-v3-akx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JBO-Vk-ISi"/>
                     </view>
                     <navigationItem key="navigationItem" id="Lcg-5U-C1O">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="R65-a5-d4d">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="co1-zJ-2b3">
-                                <rect key="frame" x="373.5" y="11" width="20.5" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="heart" catalog="system"/>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" image="heart" catalog="system" id="DxY-N8-zX6">
                             <connections>
-                                <action selector="favoritedBy:" destination="be2-hs-M53" id="WzB-0o-8bF"/>
+                                <action selector="favoritedBy:" destination="be2-hs-M53" id="vag-i8-rXw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailImage" destination="wZu-O7-0y6" id="KZz-gp-644"/>
-                        <outlet property="favoriteButton" destination="R65-a5-d4d" id="e0r-KK-Gc0"/>
+                        <outlet property="favoriteButton" destination="DxY-N8-zX6" id="kIo-DQ-ueA"/>
+                        <outlet property="favoritesLabel" destination="FWF-r8-91H" id="gVH-hB-RzT"/>
+                        <outlet property="likesLabel" destination="FWF-r8-91H" id="VWh-22-VCR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPL-wq-xKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

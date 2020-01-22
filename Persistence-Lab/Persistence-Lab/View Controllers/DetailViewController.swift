@@ -15,6 +15,10 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var favoriteButton: UIBarButtonItem!
     
+    @IBOutlet weak var likesLabel: UILabel!
+    
+    @IBOutlet weak var favoritesLabel: UILabel!
+    
     var image: Image?
     
     override func viewDidLoad() {
@@ -35,6 +39,7 @@ class DetailViewController: UIViewController {
         
         do {
             try PersistenceHelper.createFavorite(for: favorite)
+            print("added to favorite")
         } catch {
             print("could not create favorite")
         }
@@ -46,7 +51,26 @@ class DetailViewController: UIViewController {
     
     private func updateUI() {
         
+        guard let image = image else {
+            print("not guarded")
+            return
+        }
         
+        likesLabel.text = "\(image.likes ?? 0)"
+        favoritesLabel.text = "\(image.favorites ?? 0)"
+        
+        detailImage.getImage(with: image.largeImageURL) { [weak self] (result) in
+            
+            switch result{
+            case .failure(let appError):
+                print("error loading image: \(appError)")
+                DispatchQueue.main.async {
+                    self?.detailImage.image = UIImage(systemName: "xmark.fill")
+                }
+            case .success(let image):
+                self?.detailImage.image = image
+            }
+        }
     }
     
 }
